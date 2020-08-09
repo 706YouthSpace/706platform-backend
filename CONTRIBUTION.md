@@ -57,7 +57,7 @@ Activate save actions on save、Optimize imports、Reformat file、Rearrange fie
 
 数据库字段使用下划线方式连接，如 created_at
 
-数据库索引名为 [类型]_[名字]_[涉及字段]
+数据库索引名为 类型_名字_涉及字段
 
 * 比方说一个普通索引 idx_xx_school
 * 一个唯一索引 uniq_xx_email
