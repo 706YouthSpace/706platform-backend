@@ -1,7 +1,7 @@
 
 # 技术说明文档
 
-这个文档是为了让大家更好地理解代码，想要贡献代码的请看 CONTRIBUTION.md
+这个文档是为了让大家更好地理解代码，想要贡献代码的请看 [CONTRIBUTION.md](CONTRIBUTION.md)
 
 ## 如何启动项目
 当我们配置好开发环境，把项目 clone 下来之后，我们只需要找到 BackendApplication，先 run 一次，让 IDEA 生成配置文件，
