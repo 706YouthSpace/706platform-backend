@@ -39,6 +39,8 @@ master 分支的最低线要求是可以在任一个时间点无人工干预自�
 一定要写清楚 commit 的 message，标准只有一条：
 * 除了只更新文档或者注释的情况外，把 message 给提交者看，提交者要能大致说出来代码改动了什么，解决了什么问题，或者 fix 了哪个 issue
 
+如果是feature提交，建议把 issue id 放在 commit message里比方说 "bugfix: #1 xxxxx"
+
 相关的改动请尽可能放在同一个 commit 里，不相关的改动请分成不同的 feature 和 commit，灵活使用 git commit --amend
 
 ## 代码格式规范
