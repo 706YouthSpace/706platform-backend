@@ -57,4 +57,4 @@
 当然如果我们是把 redis 当作别的用途，比方说 pubsub，那我们另说
 
 ### 接口查看地址
-启动服务之后 [API接口查看](http://localhost:8080/swagger-ui/index.html)
+启动服务之后 [API接口查看](http://localhost:8080/api/swagger-ui/index.html)
