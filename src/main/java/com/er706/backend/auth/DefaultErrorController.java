@@ -8,8 +8,10 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import springfox.documentation.annotations.ApiIgnore;
 
 @Component
+@ApiIgnore
 public class DefaultErrorController extends BasicErrorController {
 
   public DefaultErrorController(ErrorAttributes errorAttributes) {
