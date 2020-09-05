@@ -1,6 +1,7 @@
 package com.er706.backend.signin;
 
 import com.er706.backend.JsonResult;
+import com.er706.backend.auth.CustomJdbcUserDetailsManager;
 import com.er706.backend.auth.JwtTokenUtil;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,6 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,7 +23,7 @@ public class SigninController {
   @Autowired
   private JwtTokenUtil jwtTokenUtil;
   @Autowired
-  private UserDetailsService userDetailsService;
+  private CustomJdbcUserDetailsManager userDetailsService;
 
   @RequestMapping(value = "/signin", method = RequestMethod.POST)
   public JsonResult<String> signin(@Valid @RequestBody SigninInput signinInput)

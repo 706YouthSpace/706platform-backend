@@ -118,6 +118,12 @@
       <groupId>org.json</groupId>
       <version>20200518</version>
     </dependency>
+    <!-- 发邮件用的模板引擎 -->
+    <dependency>
+      <artifactId>thymeleaf-spring5</artifactId>
+      <groupId>org.thymeleaf</groupId>
+      <version>3.0.11.RELEASE</version>
+    </dependency>
 
   </dependencies>
   <description>706线上平台后端服务器</description>

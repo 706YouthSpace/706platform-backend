@@ -1,11 +1,14 @@
-package com.er706.backend.auth;
+package com.er706.backend.account;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 这个对象仅用于数据库创建和查询
@@ -13,6 +16,9 @@ import lombok.Data;
 
 @Entity(name = "accounts")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class AccountModel {
 
   @Id

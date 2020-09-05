@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+<body>
+请post提交到：http://127.0.0.1:8080/api/account/email/verification, body 参数为<br>
+email: <p th:text="${email}"></p>
+uid: <p th:text="${uid}"></p>
+emailVerificationCode: <p th:text="${code}"></p>
+</body>
+</html>

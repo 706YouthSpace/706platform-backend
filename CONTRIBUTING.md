@@ -28,7 +28,7 @@ z 代表了技术bug的更新，我们修复了一些纯技术方面的bug之后
 
 然后一个需求开发完成之后我们就会删除对应的 feature 分支，这样才不至于在项目发展的后期有大量的不活跃的分支存在
 
-在 finish feature分支之前，记得用 git flow feature rebase 把 develop 分支最新的内容更新到 feature 分支上，解决完冲突之后再继续提交 
+在 finish feature分支之前，一定不要用用 git flow feature rebase, 因为这会让 commit 的 history 变的很乱。
 
 ### 关于 master 分支
 
