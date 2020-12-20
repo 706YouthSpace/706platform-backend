@@ -24,7 +24,7 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping("/captcha")
-@Profile({"integration", "product"})
+@Profile("disabled")
 @Api("集成测试环境与生产环境的人机验证服务，验证成功后走短信下发")
 public class GeetestCaptchaController {
 

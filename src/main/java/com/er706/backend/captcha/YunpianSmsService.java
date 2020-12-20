@@ -37,7 +37,8 @@ public class YunpianSmsService implements SmsService {
     cache.put(phoneNumber, phoneCode); //这里要更新，如果之前有值的话就会被替代掉
     Map<String, String> param = client.newParam(2);
     param.put(YunpianClient.MOBILE, phoneNumber);
-    param.put(YunpianClient.TEXT, String.format("【云片网】您的验证码是%s", phoneCode));
+    param.put(YunpianClient.TEXT,
+        String.format("【706青年空间】您的验证码是%s。验证码10分钟内有效，请尽快验证，祝您生活愉快！", phoneCode));
     client.sms().single_send(param);
     return phoneCode;
   }
