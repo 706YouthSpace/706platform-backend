@@ -50,7 +50,7 @@ public class EchoCaptchaController {
       @ApiIgnore @RequestBody Map<String, String> body,
       @ApiIgnore HttpSession session) {
     String captchaCode = (String) session.getAttribute("captchaCode");
-    if (body.get("code") != null && body.get("code").equals(captchaCode)) {
+    if (body.get("code") != null && body.get("code").equalsIgnoreCase(captchaCode)) {
       String phoneNumber = (String) session.getAttribute("phoneNumber");
       session.removeAttribute("captchaCode");
       session.removeAttribute("phoneNumber");
