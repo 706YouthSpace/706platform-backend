@@ -4,12 +4,14 @@ import static springfox.documentation.schema.AlternateTypeRules.newRule;
 
 import com.fasterxml.classmate.TypeResolver;
 import java.lang.reflect.WildcardType;
+import java.util.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.builders.RequestParameterBuilder;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -24,6 +26,13 @@ public class SwaggerConfig {
 
   @Bean
   public Docket api() {
+
+    RequestParameterBuilder tokenBuilder = new RequestParameterBuilder();
+    tokenBuilder.name("Authorization")
+        .in("header")
+        .description("登录校验")
+        .required(false);
+
     return new Docket(DocumentationType.SWAGGER_2)
         .select()
         .apis(RequestHandlerSelectors.basePackage("com.er706"))
@@ -31,6 +40,7 @@ public class SwaggerConfig {
         .build().alternateTypeRules( //自定义规则，如果遇到DeferredResult，则把泛型类转成json
             newRule(typeResolver.resolve(JsonResult.class,
                 typeResolver.resolve(WildcardType.class)),
-                typeResolver.resolve(WildcardType.class)));
+                typeResolver.resolve(WildcardType.class)))
+        .globalRequestParameters(Collections.singletonList(tokenBuilder.build()));
   }
 }
