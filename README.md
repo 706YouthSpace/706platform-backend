@@ -7,6 +7,11 @@
 当我们配置好开发环境，把项目 clone 下来之后，我们只需要找到 BackendApplication，先 run 一次，让 IDEA 生成配置文件，
 然后编辑这个启动配置在 active profiles 里填入 develop 保存，就配置好了本地的开发环境可以直接启动了。如果是用别的ide的小伙伴，在开发环境启动时加入参数 -Dspring.profiles.active=develop 就可以启动了
 
+### 开发环境数据库相关
+* 在开发环境中，用的是基于memory的数据库，每次重启都会清空然后初始化数据，如果想添加默认数据的话可以去 develop-data.sql 里添加
+* 在运行的过程中如果想查看数据的话，我们可以用 h2 自带的数据库界面浏览，默认地址是：[h2-console](http://127.0.0.1:8080/api/h2-console)
+* 如果调整了默认的启动端口或者修改了 context path 的话请自行调整路径
+
 ## 架构
 因为业务逻辑还比较简单，现在我们不采用复杂的微服务架构，一切都建立在 spring-boot 之上，当然这也为了将来有一天需要升级为 spring cloud 打下基础。
 
