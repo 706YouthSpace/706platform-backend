@@ -25,6 +25,8 @@ public class Profile {
   @Column(nullable = false)
   private String firstName;
 
+  @Column(nullable = false)
+  private int gender;
   @Column
   private String avatar;
   @Column

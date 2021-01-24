@@ -11,6 +11,8 @@ public class ProfileForm {
 
   private String firstName;
 
+  private int gender;
+
   private String avatar;
 
   private String background;

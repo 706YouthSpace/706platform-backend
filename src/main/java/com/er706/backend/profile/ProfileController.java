@@ -87,8 +87,7 @@ public class ProfileController {
     Profile profile = profileOpt.get();
     List<Job> jobs = profile.getJobs();
     Job newJob = new Job();
-    newJob.setProfile(profile);
-    newJob.setCompany(jobForm.getCompany());
+        newJob.setCompany(jobForm.getCompany());
     newJob.setTitle(jobForm.getTitle());
     newJob.setDescribtion(jobForm.getDescribtion());
     jobs.add(newJob);
@@ -159,7 +158,6 @@ public class ProfileController {
     newEducation.setEnd(educationForm.getEnd());
     newEducation.setMajor(educationForm.getMajor());
     newEducation.setSchool(educationForm.getSchool());
-    newEducation.setProfile(profile);
     educations.add(newEducation);
     profileDAO.save(profile);
     return JsonResult.ok();
